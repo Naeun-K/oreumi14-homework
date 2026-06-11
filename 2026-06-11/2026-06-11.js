@@ -55,3 +55,27 @@ function getPassedScores(scores) {
 // 문제 4. 합격 점수만 모으기 결과 예시
 console.log(getPassedScores(scores));
 // [85, 92, 74, 66, 100]
+
+// 문제 5. 점수 설명 만들기
+console.log("============ 5번 ==============");
+function getScoreMessages(scores) {
+  return score.map((score) => {
+    return `${score}점은 ${getGrade(score)}등급입니다.`;
+  });
+}
+// 문제 5. 점수 설명 문장 만들기 결과 예시
+// console.log(getScoreMessages(scores));
+
+// 문제 6. 전체 리포트 출력하기
+console.log("============ 6번 ==============");
+function printScoreReport(scores) {
+  return scores.forEach((score) => {
+    console.log(
+      `${score}점: ${getGrade(score)}등급, ${isPassed(score) ? "합격" : "불합격"}`,
+    );
+  });
+}
+// 문제 6. 전체 리포트 출력하기 결과 예시
+printScoreReport(scores);
+
+// 문제 7. 최종 요약 출력하기
