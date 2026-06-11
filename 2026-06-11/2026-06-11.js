@@ -85,7 +85,7 @@ function printSummary(scores) {
     `평균 점수: ${getAverage(scores)}점\n합격 점수: ${getPassedScores(scores)}\n점수 설명:\n${getScoreMessages(scores)}\n`,
   );
 }
-// 문제 7. 최종 요약 출력하기 예제
+// 문제 7. 최종 요약 출력하기
 printSummary(scores);
 
 // 도전문제. 이름과 점수 연결하기
@@ -94,7 +94,7 @@ const names = ["민수", "지은", "도윤", "서연", "하준", "유나", "지�
 function printNamedScoreReport(names, scores) {
   scores.forEach((score, index) => {
     console.log(
-      `${names[index]}: ${score}점, ${getGrade(score)}등급, ${isPassed ? "합격" : "불합격"}`,
+      `${names[index]}: ${score}점, ${getGrade(score)}등급, ${isPassed(score) ? "합격" : "불합격"}`,
     );
   });
 }
