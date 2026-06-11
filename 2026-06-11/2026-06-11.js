@@ -59,12 +59,12 @@ console.log(getPassedScores(scores));
 // 문제 5. 점수 설명 만들기
 console.log("============ 5번 ==============");
 function getScoreMessages(scores) {
-  return score.map((score) => {
-    return `${score}점은 ${getGrade(score)}등급입니다.`;
+  return scores.map((score) => {
+    return `${score}점은 ${getGrade(score)}등급입니다.\n`;
   });
 }
 // 문제 5. 점수 설명 문장 만들기 결과 예시
-// console.log(getScoreMessages(scores));
+console.log(getScoreMessages(scores));
 
 // 문제 6. 전체 리포트 출력하기
 console.log("============ 6번 ==============");
@@ -79,3 +79,11 @@ function printScoreReport(scores) {
 printScoreReport(scores);
 
 // 문제 7. 최종 요약 출력하기
+console.log("============ 7번 ==============");
+function printSummary(scores) {
+  console.log(
+    `평균 점수: ${getAverage(scores)}점\n합격 점수: ${getPassedScores(scores)}\n점수 설명:\n${getScoreMessages(scores)}`,
+  );
+}
+// 문제 7. 최종 요약 출력하기
+printSummary(scores);
