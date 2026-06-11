@@ -31,3 +31,16 @@ function isPassed(score) {
 // 문제2. 합격 여부 구하기 결과 예시
 console.log(isPassed(85)); // true
 console.log(isPassed(43)); // false
+
+// 문제 3. 평균 점수 구하기
+console.log("============ 3번 ==============");
+
+function getAverage(scores) {
+  let total = 0;
+  for (let i = 0; i < scores.length; i++) {
+    total += scores[i];
+  }
+  return total / scores.length;
+}
+// 문제 3. 평균 점수 구하기 결과 예시
+console.log(getAverage(scores)); // 74
