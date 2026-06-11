@@ -44,3 +44,14 @@ function getAverage(scores) {
 }
 // 문제 3. 평균 점수 구하기 결과 예시
 console.log(getAverage(scores)); // 74
+
+// 문제 4. 합격 점수만 모으기
+console.log("============ 4번 ==============");
+function getPassedScores(scores) {
+  return scores.filter((score) => {
+    return score >= 60;
+  });
+}
+// 문제 4. 합격 점수만 모으기 결과 예시
+console.log(getPassedScores(scores));
+// [85, 92, 74, 66, 100]
