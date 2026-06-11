@@ -60,7 +60,7 @@ console.log(getPassedScores(scores));
 console.log("============ 5번 ==============");
 function getScoreMessages(scores) {
   return scores.map((score) => {
-    return `${score}점은 ${getGrade(score)}등급입니다.\n`;
+    return `${score}점은 ${getGrade(score)}등급입니다.`;
   });
 }
 // 문제 5. 점수 설명 문장 만들기 결과 예시
@@ -82,8 +82,21 @@ printScoreReport(scores);
 console.log("============ 7번 ==============");
 function printSummary(scores) {
   console.log(
-    `평균 점수: ${getAverage(scores)}점\n합격 점수: ${getPassedScores(scores)}\n점수 설명:\n${getScoreMessages(scores)}`,
+    `평균 점수: ${getAverage(scores)}점\n합격 점수: ${getPassedScores(scores)}\n점수 설명:\n${getScoreMessages(scores)}\n`,
   );
 }
-// 문제 7. 최종 요약 출력하기
+// 문제 7. 최종 요약 출력하기 예제
 printSummary(scores);
+
+// 도전문제. 이름과 점수 연결하기
+console.log("============ 도전 ==============");
+const names = ["민수", "지은", "도윤", "서연", "하준", "유나", "지호"];
+function printNamedScoreReport(names, scores) {
+  scores.forEach((score, index) => {
+    console.log(
+      `${names[index]}: ${score}점, ${getGrade(score)}등급, ${isPassed ? "합격" : "불합격"}`,
+    );
+  });
+}
+// 도전문제. 이름과 점수 연결하기 예제
+printNamedScoreReport(names, scores);
